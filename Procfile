@@ -1,0 +1,1 @@
+web: gunicorn pnnd.wsgi --log-file -
