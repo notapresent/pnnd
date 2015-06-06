@@ -1,23 +1,37 @@
+import datetime
+
 from django.db import models
 
+
 class Section(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField('Название', max_length=250)
     slug = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.title
 
 
 class Author(models.Model):
-    firstname = models.CharField(max_length=250)
-    lastname = models.CharField(max_length=250)
+    firstname = models.CharField('Имя', max_length=250)
+    lastname = models.CharField('Фамилия', max_length=250)
     has_picture = models.BooleanField()
+
+    def __str__(self):
+        return "{} {}".format(self.firstname, self.lastname)
 
 
 class Article(models.Model):
     section = models.ForeignKey(Section)
     author = models.ForeignKey(Author)
-    pub_date = models.DateTimeField('date published')
-    is_published = models.BooleanField()
-    title = models.CharField(max_length=250)
-    intro = models.TextField()
-    body = models.TextField()
+    pub_date = models.DateTimeField('Дата публикации',
+                                    default=datetime.datetime.now)
+    is_published = models.BooleanField('Опубликован',  default=True)
+    title = models.CharField('Заголовок', max_length=250)
+    intro = models.TextField('Вступление')
+    body = models.TextField('Текст')
     has_picture = models.BooleanField()
-    keywords = models.CharField(max_length=250)
+    keywords = models.CharField('Ключевые слова',max_length=250, blank=True)
+
+    def __str__(self):
+        return self.title
+
