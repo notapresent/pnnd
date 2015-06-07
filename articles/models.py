@@ -30,8 +30,7 @@ class Article(models.Model):
     intro = models.TextField('Вступление')
     body = models.TextField('Текст')
     has_picture = models.BooleanField()
-    keywords = models.CharField('Ключевые слова',max_length=250, blank=True)
+    keywords = models.CharField('Ключевые слова', max_length=250, blank=True)
 
     def __str__(self):
         return self.title
-

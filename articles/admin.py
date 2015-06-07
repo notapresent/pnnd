@@ -8,7 +8,7 @@ class ArticleAdmin(admin.ModelAdmin):
               'pub_date', 'keywords']
     list_display = ('title', 'author', 'pub_date')
     list_filter = ['pub_date']
-    search_fields = ['title', 'intro','body']
+    search_fields = ['title', 'intro', 'body']
 
 
 admin.site.register(Section)
