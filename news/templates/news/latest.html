@@ -1,9 +1,13 @@
-{% if latest_news_list %}
-    <ul>
-    {% for ni in latest_news_list %}
-        <li><a href="{% url 'news:single' ni.id %}">{{ ni.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Нет новостей.</p>
-{% endif %}
+{% extends "__layout_2_columns.html" %}
+
+{% block content %}
+    {% if latest_news_list %}
+        <ul>
+        {% for ni in latest_news_list %}
+            <li><a href="{% url 'news:detail' ni.id %}">{{ ni.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет новостей.</p>
+    {% endif %}
+{% endblock %}

@@ -11,9 +11,9 @@ def latest(request):
     context = {'latest_news_list': latest_news}
     return render(request, 'news/latest.html', context)
 
-def single(request, ni_id):
+def detail(request, ni_id):
     ni = get_object_or_404(NewsItem, pk=ni_id)
     if not ni.is_published:
         raise Http404()
-    return render(request, 'news/single.html', {'ni': ni})
+    return render(request, 'news/detail.html', {'ni': ni})
 

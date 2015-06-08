@@ -1,0 +1,119 @@
+/* Generic */
+
+@font-face {
+    font-family: 'rodchenkocttregular';
+    src: url('fonts/rodchenko-webfont.eot');
+    src: url('fonts/rodchenko-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rodchenko-webfont.woff2') format('woff2'),
+         url('fonts/rodchenko-webfont.woff') format('woff'),
+         url('fonts/rodchenko-webfont.ttf') format('truetype'),
+         url('fonts/rodchenko-webfont.svg#rodchenkocttregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #aaa;
+}
+
+#root {
+    padding: 0;
+    background-color: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+/* Header */
+#headr {
+    height: 80px;
+    background-color: #F8F9FC;
+}
+
+
+#site-title {
+    font-family: 'rodchenkocttregular';
+    font-size: 67px;
+    text-transform: uppercase;
+    margin: 0 0 0 12px;
+    font-weight: normal;
+}
+
+#site-title a {
+    color: #000 !important;
+}
+
+
+/* container block */
+.equal, .equal > div[class*='pure-u-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 0 auto;
+}
+
+.pad1 {
+    padding: 1em;
+}
+
+#col1.home , #col3.home { background-color: #E5E8F3; }
+#col2.home { background-color: #F8F9FC; }
+
+#col1 { background-color: #F8F9FC; }
+#col3 { background-color: #E5E8F3; }
+
+
+#col1 h2, #col2 h2, #col3 h2 {
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.pure-menu-list {
+    margin: 0;
+    padding: 0;
+    display: table !important;
+    width: 100%;
+}
+
+#navbar { text-transform: lowercase; }
+
+.pure-menu-item {
+    display: table-cell !important;
+
+}
+
+.pure-menu-link {
+    padding: 1em;
+}
+
+/* Footer */
+#footr {
+    background-color: #F8F9FC;
+    line-height: 125%;
+    font-size: 90%;
+    color: #666;
+    padding: 1em 1em 1em 1em;
+}
+
+ul.footerlinks {
+    float: left;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: 0 3em 0 0;
+    list-style-type: none;
+    border-right: 1px solid #ddd;
+}
+
+#footr p {
+    margin: 0;
+}
