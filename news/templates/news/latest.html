@@ -1,0 +1,9 @@
+{% if latest_news_list %}
+    <ul>
+    {% for ni in latest_news_list %}
+        <li><a href="{% url 'news:single' ni.id %}">{{ ni.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Нет новостей.</p>
+{% endif %}
