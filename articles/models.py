@@ -24,7 +24,7 @@ class Author(models.Model):
 
 class Article(models.Model):
     section = models.ForeignKey(Section)
-    author = models.ForeignKey(Author)
+    author = models.ForeignKey(Author, null=True)
     pub_date = models.DateTimeField('Дата публикации',
                                     default=datetime.datetime.now)
     is_published = models.BooleanField('Опубликован',  default=True)
