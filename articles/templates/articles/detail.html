@@ -1,0 +1,9 @@
+{% extends "__layout_2_columns.html" %}
+
+{% block content %}
+    <h1>{{ article.title }}</h1>
+    Опубликовано: {{ article.pub_date }}
+    <div id="content_text">
+        {{ article.body }}
+    </div>
+{% endblock %}

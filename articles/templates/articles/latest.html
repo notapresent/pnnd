@@ -1,0 +1,14 @@
+{% extends "__layout_2_columns.html" %}
+
+{% block content %}
+    {% if articles %}
+        <ul>
+        {% for article in articles %}
+            <li><a href="{% url 'articles:detail' article.id %}">{{ article.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет материалов.</p>
+    {% endif %}
+
+{% endblock %}
