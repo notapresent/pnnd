@@ -4,9 +4,9 @@ from django.http import Http404
 from .models import Article, Section
 
 
-def latest(request, section_id=None):
-    section = Section.get(section_id) if section_id else None
-    articles = Article.get_latest(section_id, 25)
+def latest(request, section_slug=None):
+    section = Section.objects.filter(slug=section_slug).first() if section_slug else None
+    articles = Article.get_latest(section, 25)
     context = {'articles': articles, 'section': section}
     return render(request, 'articles/latest.html', context)
 

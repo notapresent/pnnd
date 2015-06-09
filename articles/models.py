@@ -12,6 +12,10 @@ class Section(models.Model):
     def __str__(self):
         return self.title
 
+    @classmethod
+    def get_navlist(cls):
+        return cls.objects.order_by('navbar_order')
+
 
 class Author(models.Model):
     firstname = models.CharField('Имя', max_length=250)
@@ -38,10 +42,10 @@ class Article(models.Model):
         return self.title
 
     @classmethod
-    def get_latest(cls, section_id, n):
-        filters = { 'is_published': True }
+    def get_latest(cls, section, n):
+        filters = {'is_published': True}
 
-        if section_id:
-            filters['section'] = section_id
+        if section:
+            filters['section'] = section.id
 
         return cls.objects.filter(**filters).order_by('-pub_date')[:n]
