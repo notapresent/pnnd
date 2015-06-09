@@ -8,7 +8,7 @@ class NewsItem(models.Model):
                                     default=datetime.datetime.now)
     is_published = models.BooleanField('Опубликована', default=True)
     is_own = models.BooleanField('Собственная', default=True)
-    title = models.CharField('Заголовок', max_length=250)
+    title = models.CharField('Заголовок', max_length=300)
     body = models.TextField('Текст')
     keywords = models.CharField(max_length=250, blank=True)
 
