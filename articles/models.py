@@ -6,6 +6,8 @@ from django.db import models
 class Section(models.Model):
     title = models.CharField('Название', max_length=250)
     slug = models.CharField(max_length=64)
+    navbar_order = models.IntegerField('Позиция в навигационной панели',
+                                       blank=True, null=True)
 
     def __str__(self):
         return self.title
