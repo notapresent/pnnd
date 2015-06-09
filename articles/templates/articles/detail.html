@@ -4,6 +4,6 @@
     <h1>{{ article.title }}</h1>
     Опубликовано: {{ article.pub_date }}
     <div id="content_text">
-        {{ article.body }}
+        {{ article.body|safe }}
     </div>
 {% endblock %}
