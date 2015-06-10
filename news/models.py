@@ -4,6 +4,10 @@ from django.db import models
 
 
 class NewsItem(models.Model):
+    class Meta:
+        verbose_name_plural = "Новости"
+        verbose_name = "Новость"
+
     pub_date = models.DateTimeField('Дата публикации',
                                     default=datetime.datetime.now)
     is_published = models.BooleanField('Опубликована', default=True)
@@ -19,4 +23,3 @@ class NewsItem(models.Model):
     def get_latest(cls, n):
         return cls.objects.filter(is_published=True).order_by('-pub_date')[:n]
 
-    
