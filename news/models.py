@@ -18,3 +18,5 @@ class NewsItem(models.Model):
     @classmethod
     def get_latest(cls, n):
         return cls.objects.filter(is_published=True).order_by('-pub_date')[:n]
+
+    

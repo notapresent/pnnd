@@ -49,3 +49,16 @@ class Article(models.Model):
             filters['section'] = section.id
 
         return cls.objects.filter(**filters).order_by('-pub_date')[:n]
+
+    @classmethod
+    def last_in_section(cls, section, n=2):
+        if isinstance(section, (str,bytes)):
+            sec = Section.objects.filter(slug=section).first()
+        else:
+            sec = Section.objects.get(section)
+
+        articles = cls.objects.filter(section=sec).order_by('-pub_date')[:n]
+        return {
+            'section': sec,
+            'articles': articles
+        }
