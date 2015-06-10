@@ -1,0 +1,65 @@
+[
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u0410\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430",
+    "slug": "analytics"
+  },
+  "pk": 1
+},
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438",
+    "slug": "comments"
+  },
+  "pk": 2
+},
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u0414\u0438\u0441\u043a\u0443\u0441\u0441\u0438\u044f",
+    "slug": "discussion"
+  },
+  "pk": 3
+},
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b",
+    "slug": "docs"
+  },
+  "pk": 4
+},
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u0418\u043d\u0442\u0435\u0440\u0432\u044c\u044e",
+    "slug": "interview"
+  },
+  "pk": 5
+},
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u041b\u0443\u043a\u043e\u043c\u043e\u0440\u044c\u0435",
+    "slug": "politfiction"
+  },
+  "pk": 6
+},
+{
+  "model": "articles.section",
+  "fields": {
+    "navbar_order": null,
+    "title": "\u0422\u0435\u043d\u0434\u0435\u043d\u0446\u0438\u0438",
+    "slug": "trend"
+  },
+  "pk": 7
+}
+]
