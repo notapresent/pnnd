@@ -6,8 +6,7 @@
     src: url('fonts/rodchenko-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/rodchenko-webfont.woff2') format('woff2'),
          url('fonts/rodchenko-webfont.woff') format('woff'),
-         url('fonts/rodchenko-webfont.ttf') format('truetype'),
-         url('fonts/rodchenko-webfont.svg#rodchenkocttregular') format('svg');
+         url('fonts/rodchenko-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
