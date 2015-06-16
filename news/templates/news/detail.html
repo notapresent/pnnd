@@ -1,9 +1,9 @@
 {% extends "__layout_2_columns.html" %}
 
 {% block content %}
-    <h1>{{ ni.title }}</h1>
-    Опубликовано: {{ ni.pub_date }}
+    <h1>{{ newsitem.title }}</h1>
+    Опубликовано: {{ newsitem.pub_date }}
     <div id="content_text">
-        {{ ni.body|safe }}
+        {{ newsitem.body|safe }}
     </div>
 {% endblock %}

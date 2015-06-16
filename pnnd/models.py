@@ -5,7 +5,7 @@ class MainPage(object):
     @classmethod
     def get_context(cls):
         rv = {}
-        rv['news'] = NewsItem.get_latest(25)
+        rv['news'] = NewsItem.objects.filter(is_published=True).order_by('-pub_date')[:25]
         rv['main'] = None
         rv['context'] = None
         rv['left_column_data'] = {
